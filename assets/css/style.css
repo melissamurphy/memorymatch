@@ -1,1 +1,64 @@
+*{
+  box-sizing: border-box;
+}
 
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: aqua;
+  border: 2px solid white;
+}
+header{
+  width: 100%;
+  height: 20%;
+  border: 2px solid rebeccapurple;
+}
+.container{
+  border: 2px solid tomato;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* spaces out children evenly */
+  align-items: center; /* aligns children vertically */
+}
+aside{
+  height: 80%;
+  width: 20%;
+  background-color: tomato;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+h4 {
+  height: calc(100%/7);
+  margin: 0;
+}
+main{
+  width:70%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.statbox{
+  height: calc(100%/7);
+  width: 100%;
+  border: 3px solid teal;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.cardbox {
+  height: 33%;
+  width: 16.6%;
+
+}
+.cardfront{
+  height: 100%;
+  background-image: url("../images/lfz-card.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 5px solid hotpink;
+}
