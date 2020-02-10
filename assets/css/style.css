@@ -30,9 +30,6 @@ aside {
   justify-content: space-evenly;
   height: 100%;
   margin-left: 2.5%;
-  /* background-color: aliceblue; */
-  /* border: 1px solid cadetblue; */
-
 }
 .statbox {
   display: flex;
@@ -50,18 +47,59 @@ main {
   height: 94%;
 }
 
+/* Position parent as relative so children can position absolute */
 .cardbox {
+  position: relative;
   height: 31%;
   margin: 1px;
-  background-image: url(../images/lfz-card.jpg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-color: lemonchiffon; */
-  /* border: 1px solid brown; */
 }
 
+/* Positioning: you need to position these siblings relative to their positioned parent (via position absolute) so they overlap/avoid overflow problem */
+/* Background attributes: trim individual image as needed to maintain original shape ('cover') and trim all sides evenly ('center') */
+.cardfront, .cardback {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.cardback {
+  background-image: url(../images/lfz-card.jpg);
+}
+.css-logo {
+  background-image: url(../images/css-logo.png);
+}
+.docker-logo {
+  background-image: url(../images/docker-logo.jpg);
+}
+.gitHub-logo {
+  background-image: url(../images/gitHub-logo.png);
+}
+.html-logo {
+  background-image: url(../images/html-logo.png);
+}
+.js-logo {
+  background-image: url(../images/js-logo.png);
+}
+.mysql-logo {
+  background-image: url(../images/mysql-logo.jpg);
+}
+.node-logo {
+  background-image: url(../images/node-logo.png);
+}
+.php-logo {
+  background-image: url(../images/php-logo.jpeg);
+}
+.react-logo {
+  background-image: url(../images/react-logo.png);
+}
+
+/* make sure 'hidden' is placed at the bottom of the sheet to not be overriden by cascading */
+.hidden {
+  display: none;
+}
 
 /*
 *{
