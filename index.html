@@ -32,85 +32,100 @@
       <div class="statbox">0</div>
     </aside>
 
-    <main class="col-10">
+    <main id="gameCards" class="col-10">
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront js-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront css-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront js-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront css-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront gitHub-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront gitHub-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront html-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront html-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront mysql-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront node-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront mysql-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront node-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront php-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront react-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront php-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront react-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront docker-logo"></div>
         <div class="cardback"></div>
       </div>
       <div class="cardbox col-2">
-        <div class="cardfront"></div>
+        <div class="cardfront docker-logo"></div>
         <div class="cardback"></div>
       </div>
     </main>
   </div>
 </div>
-
-  <!-- </div> -->
-  <!-- header+aside+main>div.card*18>div.cardfront+div.cardback -->
 </body>
 
+<script>
+// click-event listener added to the 'main' container
+var gameCards = document.getElementById("gameCards");
+gameCards.addEventListener("click", handleClick);
+
+function handleClick(event) {
+if (event.target.className.indexOf("cardback") === -1) {
+    return;
+    // Exits function (via return) if -1 index (i.e. not 'cardback'). "Preventing functions from running is this way to prevent undesired effects is common in programming"
+
+  }
+ // add 'hidden' class to className ('class' attribute values in string)
+  var clickedElement = event.target;
+  clickedElement.className = clickedElement.className + " " + "hidden";
+  // clickedElement.classList.add("hidden") *not supported in IE9
+}
+
+</script>
 </html>
