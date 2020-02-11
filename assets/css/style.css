@@ -1,27 +1,41 @@
-header {
-  margin: auto;
-  font-size: 3em;
-}
-
-.gameRow {
-  height: 80%;
-}
-
-.cardbox {
-  display: flex;
-}
-
 body {
   height: 100vh;
   margin: 0;
 }
-
 .container {
   height: 100%;
   background-image: url(../images/lfz-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+header {
+  margin: auto;
+  font-size: 3em;
+}
+.gameRow {
+  height: 80%;
+}
+
+/* Modal - covers screen */
+.modal {
+  position: fixed;
+  /* z-index: 1;   MDN The stacking context https://mzl.la/37irXd5  */
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);  /* Opacity 0.4 on scale 0-1 */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: skyblue;
+  margin: 15% auto;
+  width: 75%;
+  height: 50%;
+  font-size: 20pt;
+  text-align: center;
+  border: 2px solid teal;
 }
 
 aside {
