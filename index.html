@@ -8,6 +8,7 @@
   <title>Memory Match</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/grid.css">
+
 </head>
 
 <body>
@@ -108,24 +109,6 @@
     </main>
   </div>
 </div>
+<script src="./assets/js/script.js"></script>
 </body>
-
-<script>
-// click-event listener added to the 'main' container
-var gameCards = document.getElementById("gameCards");
-gameCards.addEventListener("click", handleClick);
-
-function handleClick(event) {
-if (event.target.className.indexOf("cardback") === -1) {
-    return;
-    // Exits function (via return) if -1 index (i.e. not 'cardback'). "Preventing functions from running is this way to prevent undesired effects is common in programming"
-
-  }
- // add 'hidden' class to className ('class' attribute values in string)
-  var clickedElement = event.target;
-  clickedElement.className = clickedElement.className + " " + "hidden";
-  // clickedElement.classList.add("hidden") *not supported in IE9
-}
-
-</script>
 </html>
