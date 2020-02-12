@@ -5,18 +5,28 @@ var firstCardClasses;
 var secondCardClasses;
 var maxMatches = 9;
 var matches = 0;
+var attempts = 0;
+var gamesPlayed = 0;
 
 var gameCards = document.getElementById("gameCards");
 gameCards.addEventListener("click", handleClick);
 
+function calculateAccuracy (attempts, matches) {
+  return `${Math.trunc((matches/attempts)*100)}%`;
+}
+
+function displayStats () {
+  document.getElementById("gamesPlayed").textContent = gamesPlayed;
+  document.getElementById("attempts").textContent = attempts;
+  document.getElementById("accuracy").textContent = calculateAccuracy(attempts, matches);
+}
+
 function handleClick(event) {
   if (event.target.className.indexOf("cardback") === -1) {
     return;
-    // Exits function (via return) if -1 index (i.e. not 'cardback'). "Preventing functions from running is this way to prevent undesired effects is common in programming"
   }
   var clickedElement = event.target;
   clickedElement.classList.add("hidden")
-  // *not supported in IE9
 
   if (!firstCardClicked) {
     firstCardClicked = clickedElement;
@@ -24,22 +34,23 @@ function handleClick(event) {
   } else {
     secondCardClicked = clickedElement;
     secondCardClasses = secondCardClicked.previousElementSibling.className;
-    // remove listening for click-events after the 2nd card clicked [listening restored after flipToCardback]
-    gameCards.removeEventListener("click", handleClick);
+    attempts++;
+    // remove listening for click-events after the 2nd card clicked [listening restored when resetting first/secondCardClicked]
+    // gameCards.removeEventListener("click", handleClick);
     if (firstCardClasses === secondCardClasses) {
       matches++;
       if (matches === maxMatches) {
         document.getElementById("winModal").classList.remove("hidden");
       }
-
-      gameCards.addEventListener("click", handleClick);
-      // start a new round by resetting values to falsy
+      // gameCards.addEventListener("click", handleClick);
+      // start new round
       firstCardClicked = null;
       secondCardClicked = null;
     } else {
+      gameCards.removeEventListener("click", handleClick);
+
       function flipToCardback() {
         firstCardClicked.classList.remove("hidden");
-        // alternative: firstCardClicked.classList.toggle("hidden");
         secondCardClicked.classList.remove("hidden");
         // start new round
         gameCards.addEventListener("click", handleClick);
@@ -48,5 +59,7 @@ function handleClick(event) {
       }
       setTimeout(flipToCardback, 1500);
     }
+    displayStats();
+
   }
 }
