@@ -2,27 +2,26 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Memory Match</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/grid.css">
+  <title>LFZ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+
+</style>
 
 </head>
 
+
 <body>
 <div class="container">
-
-  <!-- Header -->
   <div class="row headerRow">
     <header>
-        LFZ Memory Match
+    LFZ Memory Match
     </header>
   </div>
-  <!-- end header -->
-
-  <!-- Stats Info and Game Cards -->
   <div class="row gameRow">
     <aside class="col-2">
       <div class="statbox">Stats</div>
@@ -35,92 +34,98 @@
     </aside>
 
     <main id="gameCards" class="col-10">
-      <div class="cardbox col-2">
-        <div class="cardfront js-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront css-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront js-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront css-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront gitHub-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront gitHub-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront html-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront html-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront mysql-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront node-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront mysql-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront node-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront php-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront react-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront php-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront react-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront docker-logo"></div>
-        <div class="cardback"></div>
-      </div>
-      <div class="cardbox col-2">
-        <div class="cardfront docker-logo"></div>
-        <div class="cardback"></div>
-      </div>
+      Main area for cards
     </main>
-  </div>
 </div>
-
-<!-- Modal -->
-<div id="winModal" class="hidden modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <p>Congratulations</p>
-    <p>You have won!!!</p>
-    <button type="button" id="resetButton">Would You Like to Play Again?</button>
-  </div>
-
-</div>
-<script src="./assets/js/script.js"></script>
 </body>
+<!-- Stats Info and Game Cards -->
+<div class="row gameRow">
+  <aside class="col-2">
+    <div class="statbox">Stats</div>
+    <div class="statbox">Games Played</div>
+    <div id="gamesPlayed" class="statbox">0</div>
+    <div class="statbox">Attempts</div>
+    <div id="attempts" class="statbox">0</div>
+    <div class="statbox">Accuracy</div>
+    <div id="accuracy" class="statbox">--</div>
+  </aside>
+
+  <main id="gameCards" class="col-10">
+    <div class="cardbox col-2">
+      <div class="cardfront js-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront css-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront js-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront css-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront gitHub-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront gitHub-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront html-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront html-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront mysql-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront node-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront mysql-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront node-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront php-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront react-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront php-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront react-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront docker-logo"></div>
+      <div class="cardback"></div>
+    </div>
+    <div class="cardbox col-2">
+      <div class="cardfront docker-logo"></div>
+      <div class="cardback"></div>
+    </div>
+  </main>
+</div>
+</div>
+</body>
+
 </html>
