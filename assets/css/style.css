@@ -6,7 +6,7 @@ body {
 }
 .container {
   height: 100%;
-  background-image: url(../images/lfz-background.jpg);
+  background-image: url(../images/music-staff.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -104,7 +104,7 @@ main {
 }
 
 .cardback {
-  background-image: url(../images/lfz-card.jpg);
+  background-image: url(../images/wavy-music-notes.jpg);
 }
 .css-logo {
   background-image: url(../images/css-logo.png);
