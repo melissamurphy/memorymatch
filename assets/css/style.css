@@ -12,7 +12,15 @@ body {
   background-position: center;
   font-size: 20pt;
 }
-header {
+
+ .gameRow {
+  height: 80%;
+}
+
+.cardRow {
+  height: 33%;
+}
+/* header {
   margin: auto;
   font-size: 3em;
   color: seashell;
@@ -23,9 +31,7 @@ header {
 background-image: linear-gradient(to bottom, rgba(240,0,130,0.3), rgba(0,0,0,0.01));
 }
 
-.gameRow {
-  height: 80%;
-}
+
 
 /* Modal - covers screen */
 .modal {
@@ -38,7 +44,7 @@ background-image: linear-gradient(to bottom, rgba(240,0,130,0.3), rgba(0,0,0,0.0
 }
 
 /* Modal Content */
-.modal-content {
+/* .modal-content {
   background-color: skyblue;
   background-image: radial-gradient(yellow 10%, red 26%, teal 90%);
   margin: 15% auto;
@@ -73,31 +79,32 @@ aside {
   justify-content: center;
   align-items: center;
   background-color: rgba(86,82,82,0.8);  /* Opacity 0.4 on scale 0-1 */
-  background-image: linear-gradient(to top, rgba(240,0,130,0.3), rgba(0,0,0,0.01));
+  /* background-image: linear-gradient(to top, rgba(240,0,130,0.3), rgba(0,0,0,0.01));
 
-}
+} */
 
-main {
-  display: flex;
+
+/* main { */
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 1%;
-  height: 94%;
-}
+  height: 94%; */
+/* } */
 
 /* Position parent as relative so children can position absolute */
-.cardbox {
+/* .cardbox {
   position: relative;
   height: 31%;
   margin: 1px;
-}
+} */
 
 /* Positioning: you need to position these siblings relative to their positioned parent (via position absolute) so they overlap/avoid overflow problem */
 /* Background attributes: trim individual image as needed to maintain original shape ('cover') and trim all sides evenly ('center') */
 .cardfront, .cardback {
-  position: absolute;
+  /* position: absolute;
   height: 100%;
-  width: 100%;
+  width: 100%; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
